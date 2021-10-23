@@ -2,6 +2,7 @@ import React from 'react'
 import {Button,Typography,AppBar,Card, CardActions,CardContent, CardMedia, CssBaseline,Grid,Toolbar,Container} from '@material-ui/core'
 import { PhotoCamera } from '@material-ui/icons'
 import useStyles from './styles'
+const cards= [1,2,3,4,5,6,7,8,9]
 
 export default function App() {
   const classes = useStyles()
@@ -39,29 +40,33 @@ export default function App() {
             </div>
           </Container>
         </div>
-        <Container className={classes.cardGrid} maxWidth="md">
-          <Grid container spacing={4}>
-            <Grid item>
-              <Card className={classes.card}>
-                <CardMedia 
-                  className={classes.cardMedia} 
-                  image="https://source.unsplash.com/random"
-                  title="Image Title"
-                />
-                <CardContent className={classes.cardContent}>
-                  <Typography gutterBottom variant="h5">
-                    Heading
-                  </Typography>
-                  <Typography gutterBottom >
-                     Here goes the content of the card.
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button size="small" color="primary">View</Button>
-                  <Button size="small" color="primary">Edit</Button>
-                </CardActions>
-              </Card>
-            </Grid>
+        <Container className={classes.cardGrid} maxWidth="md" >
+          <Grid container spacing={4} >
+            {cards.map ((index)=>{
+                  return(
+                  <Grid item xs={12} sm={6} md={4} key ={index}>
+                    <Card className={classes.card}>
+                      <CardMedia 
+                        className={classes.cardMedia} 
+                        image="https://source.unsplash.com/random"
+                        title="Image Title"
+                      />
+                      <CardContent className={classes.cardContent}>
+                        <Typography gutterBottom variant="h5">
+                          Card Title
+                        </Typography>
+                        <Typography gutterBottom >
+                          Here goes the content of the card. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, obcaecati!
+                        </Typography>
+                      </CardContent>
+                      <CardActions>
+                        <Button size="small" color="primary">View</Button>
+                        <Button size="small" color="primary">Edit</Button>
+                      </CardActions>
+                    </Card>
+                  </Grid>
+                  )
+                })}
           </Grid>
         </Container>
       </main>

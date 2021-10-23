@@ -10,8 +10,22 @@ const useStyles = makeStyles((theme)=>({
   },
 button:{
 marginTop:'2rem'
-}
+},
 
+cardGrid:{
+  padding: '1rem 0'
+},
+card:{
+  height:'100%',
+  display:'flex',
+  flexDirection:'column'
+},
+cardMedia:{
+  paddingTop:'56.25%'
+},
+cardContent:{
+  flexGrow:'1'
+},
 })) 
 
 export default useStyles;
