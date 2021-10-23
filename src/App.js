@@ -1,5 +1,5 @@
 import React from 'react'
-import {Button,Typography,AppBar,Card, CardActions,CardMedia, CssBaseline,Grid,Toolbar,Container} from '@material-ui/core'
+import {Button,Typography,AppBar,Card, CardActions,CardContent, CardMedia, CssBaseline,Grid,Toolbar,Container} from '@material-ui/core'
 import { PhotoCamera } from '@material-ui/icons'
 import useStyles from './styles'
 
@@ -39,6 +39,31 @@ export default function App() {
             </div>
           </Container>
         </div>
+        <Container className={classes.cardGrid} maxWidth="md">
+          <Grid container spacing={4}>
+            <Grid item>
+              <Card className={classes.card}>
+                <CardMedia 
+                  className={classes.cardMedia} 
+                  image="https://source.unsplash.com/random"
+                  title="Image Title"
+                />
+                <CardContent className={classes.cardContent}>
+                  <Typography gutterBottom variant="h5">
+                    Heading
+                  </Typography>
+                  <Typography gutterBottom >
+                     Here goes the content of the card.
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Button size="small" color="primary">View</Button>
+                  <Button size="small" color="primary">Edit</Button>
+                </CardActions>
+              </Card>
+            </Grid>
+          </Grid>
+        </Container>
       </main>
     </>
   )
