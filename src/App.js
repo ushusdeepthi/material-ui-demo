@@ -10,7 +10,7 @@ export default function App() {
       <CssBaseline />
       <AppBar position ="relative">
         <Toolbar>
-          <PhotoCamera />
+          <PhotoCamera className= {classes.icon}/>
           <Typography variant="h6">Photo Album</Typography>
         </Toolbar>
       </AppBar>
@@ -23,7 +23,7 @@ export default function App() {
             <Typography variant ="h5" align="center" color="textsecondary" paragraph>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, laboriosam.
             </Typography>
-            <div>
+            <div  className={classes.button}>
               <Grid container spacing ={2} justify ="center">
                 <Grid item>
                   <Button variant ="contained" color="primary">
