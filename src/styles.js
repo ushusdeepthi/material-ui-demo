@@ -26,6 +26,10 @@ cardMedia:{
 cardContent:{
   flexGrow:'1'
 },
+footer:{
+  backgroundColor:'theme.palette.background.paper',
+  padding: '2rem 0',
+}
 })) 
 
 export default useStyles;
